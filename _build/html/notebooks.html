@@ -1,0 +1,1223 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Diabetes &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Inleiding" href="markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Analyse van diabetes en risicofactoren.
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Inleiding</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Diabetes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebooks.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Diabetes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-preprocessing">Dataset en preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-gezondheidsindicatoren-en-diabetes">Perspectief 1: Gezondheidsindicatoren en Diabetes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-1-leeftijdsgebonden-comorbiditeiten-bij-diabetes-de-last-van-hypertensie-en-hartziekte-in-verschillende-leeftijdsgroepen-onderzoeken">Arg 1: Leeftijdsgebonden comorbiditeiten bij diabetes: De last van hypertensie en hartziekte in verschillende leeftijdsgroepen onderzoeken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-2-geslachtsgebonden-verschillen-in-diabetespreventie-wijzen-op-de-invloed-van-demografische-factoren-op-de-diagnose-van-diabetes">Arg 2: Geslachtsgebonden verschillen in diabetespreventie wijzen op de invloed van demografische factoren op de diagnose van diabetes.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-levensstijlfactoren-en-diabetes">Perspectief 2: Levensstijlfactoren en Diabetes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Perspectief 2: Levensstijlfactoren en Diabetes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-1-de-rol-van-bmi-als-risicofactor-voor-diabetes-een-grafische-analyse">Arg 1: De rol van BMI als risicofactor voor diabetes: een grafische analyse</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-2-roken-speelt-geen-grote-rol-op-diabetes">Arg 2: Roken speelt geen grote rol op diabetes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arg3-verband-tussen-bloedglucose-level-hemoglobine-a1c-level-en-diabetesrisico">Arg3: Verband tussen bloedglucose level , hemoglobine A1c level en diabetesrisico.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie">Reflectie</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diabetes">
+<h1>Diabetes<a class="headerlink" href="#diabetes" title="Permalink to this heading">#</a></h1>
+<section id="dataset-en-preprocessing">
+<h2>Dataset en preprocessing<a class="headerlink" href="#dataset-en-preprocessing" title="Permalink to this heading">#</a></h2>
+<p>Wij hebben onze dataset gevonden op kaggle onder de naam: Diabetes prediction dataset. De dataset bestaat uit medische en demografische gegevens van patiënten. In de dataset worden natuurlijk leeftijd en geslacht vermeld en daarnaast nog de bmi, de rookgeschiedenis, het bloedglucose level, het hemoglobine A1c level, de hypertensie, hartziekte en diabetes. De variabelen worden uitgedrukt in getallen in een bepaald interval of met een 0 of 1, oftewel ‘ja’ of ‘nee’, dit wordt gedaan bij hypertensie, hartziekte en diabetes.</p>
+<p>Voor het meeste gebruik van de benodigde data konden wij de data rechtstreeks uit de dataset gebruiken. Wij hebben wel enkele wijzigingen moeten maken voor een betere dataset en dus voor betere visualisaties.
+In een staafdiagram tonen we het percentage mannen en vrouwen met diabetes in verschillende leeftijdsintervallen. In eerste instantie hebben we een nieuwe kolom in de dataset gemaakt met de naam ‘Leeftijdscategorieën’. In deze kolom hadden we nieuwe intervallen voor leeftijd gezet. Nu moesten we het percentage van alle mannen en vrouwen met diabetes per totaal berekenen.
+Voor de taartdiagram hebben we ook een nieuwe kolom gemaakt, genaamd ‘multi_problems’. Onze dataset bevat twee variabelen: Hartziekte en Hypertensie. Deelnemers kunnen 0 problemen hebben, 1 of 2. Die waarden worden weergegeven in de nieuwe kolom. Nu onderscheiden we de waarden 0,1,2 in elk een enkele groep mensen.
+Voor de bar plot van rookgeschiedenis is een nieuwe variabele gemaakt genaamd rook categorie. Alle mogelijkheden van de variabele rookgeschiedenis zijn onderverdeeld in de juiste categorie en zijn vervolgens in de rook categorie geplaatst. Met deze nieuwe variabele hebben wij de figuur over rookgeschiedenis gemaakt.</p>
+<section id="perspectief-1-gezondheidsindicatoren-en-diabetes">
+<h3>Perspectief 1: Gezondheidsindicatoren en Diabetes<a class="headerlink" href="#perspectief-1-gezondheidsindicatoren-en-diabetes" title="Permalink to this heading">#</a></h3>
+<p>In dit perspectief zullen we dieper ingaan op de relatie tussen niet beïnvloedbare gezondheidsindicatoren en diabetes. Door de associatie tussen leeftijd, geslacht, hypertensie en hartziekte met de prevalentie en controle van diabetes te onderzoeken, streven we ernaar waardevolle inzichten te verkrijgen. We zullen de dataset analyseren om de prevalentie van deze gezondheidsindicatoren onder mensen met diabetes vast te stellen en hun impact op het beheer van diabetes te verkennen. Met behulp van dit perspectief kunnen we de nadruk leggen op het belang van het aanpakken van comorbiditeiten en het bevorderen van algehele gezondheid om de resultaten van diabetes te verbeteren.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;png&quot;</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="kn">import</span> <span class="n">init_notebook_mode</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span>
+<span class="kn">from</span> <span class="nn">dash.dependencies</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;~/Desktop/diabetes_prediction_dataset.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;leeftijdscategorie&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;0-10&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;10-20&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;20-30&#39;</span><span class="p">,</span> 
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;30-40&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;40-50&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;50-60&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;60-70&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;70-80&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">,</span> <span class="s1">&#39;80-90&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=90&#39;</span>
+<span class="p">)))))))))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;multiproblematic&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">heart_disease</span> 
+<span class="n">count_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_3</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;multiproblematic&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Diabetic&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-diabetic&#39;</span><span class="p">]</span>
+
+<span class="c1"># # Create subplots: use &#39;domain&#39; type for Pie subplot</span>
+<span class="c1"># fig = make_subplots(rows=1, cols=3, specs=[[{&#39;type&#39;:&#39;domain&#39;}, {&#39;type&#39;:&#39;domain&#39;}, {&#39;type&#39;:&#39;domain&#39;}]],</span>
+<span class="c1">#                    subplot_titles = [&#39;2-problems&#39;, &#39;1-problem&#39;, &#39;0-problems&#39;])</span>
+<span class="c1"># fig.add_trace(go.Pie(labels=labels, values=[358, 916], name=&quot;2-problems&quot;, scalegroup=&quot;one&quot;),</span>
+<span class="c1">#               1, 1)</span>
+<span class="c1"># fig.add_trace(go.Pie(labels=labels, values=[2639,9595], name=&quot;1-problem&quot;, scalegroup=&quot;one&quot;),</span>
+<span class="c1">#               1, 2)</span>
+<span class="c1"># fig.add_trace(go.Pie(labels=labels, values=[5503, 89489], name=&quot;0-problems&quot;, scalegroup=&quot;one&quot;),</span>
+<span class="c1">#               1, 3)</span>
+
+<span class="c1"># # Use `hole` to create a donut-like pie chart</span>
+<span class="c1"># fig.update_traces(</span>
+<span class="c1"># #     hole=.7,</span>
+<span class="c1">#     hoverinfo=&quot;label+percent+name&quot;</span>
+<span class="c1"># )</span>
+
+<span class="c1"># fig.update_layout(</span>
+<span class="c1">#     title_text=&quot;influence heart disease and hypertension on Diabetes&quot;,</span>
+<span class="c1"># )</span>
+<span class="c1"># fig.show()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;leeftijdscategorieën&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;0-10&#39;</span><span class="p">,</span> <span class="s1">&#39;10-20&#39;</span><span class="p">,</span> <span class="s1">&#39;20-30&#39;</span><span class="p">,</span> <span class="s1">&#39;30-40&#39;</span><span class="p">,</span> <span class="s1">&#39;40-50&#39;</span><span class="p">,</span> <span class="s1">&#39;50-60&#39;</span><span class="p">,</span> <span class="s1">&#39;60-70&#39;</span><span class="p">,</span> <span class="s1">&#39;70-80&#39;</span><span class="p">,</span> <span class="s1">&#39;80-90&#39;</span><span class="p">],</span>
+<span class="s2">&quot;geen_problemen&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0022030945793626395</span><span class="p">,</span> <span class="mf">0.008483991516008484</span><span class="p">,</span> <span class="mf">0.0127428616376937</span><span class="p">,</span> <span class="mf">0.031169640769890126</span><span class="p">,</span> <span class="mf">0.0622904031394934</span><span class="p">,</span> <span class="mf">0.11179670670707219</span><span class="p">,</span> <span class="mf">0.17056402808036794</span><span class="p">,</span> <span class="mf">0.19106892796016803</span><span class="p">,</span> <span class="mf">0.16495180331419906</span><span class="p">],</span>
+<span class="s2">&quot;hart&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.16666666666666666</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.016203703703703703</span><span class="p">,</span> <span class="mf">0.036231884057971016</span><span class="p">,</span> <span class="mf">0.06601466992665037</span><span class="p">,</span> <span class="mf">0.11886091621956253</span><span class="p">,</span> <span class="mf">0.14117043121149897</span><span class="p">,</span> <span class="mf">0.1071663379355687</span><span class="p">],</span>
+<span class="s2">&quot;hyper&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.11320754716981132</span><span class="p">,</span> <span class="mf">0.15046296296296297</span><span class="p">,</span> <span class="mf">0.16485507246376813</span><span class="p">,</span> <span class="mf">0.1941320293398533</span><span class="p">,</span> <span class="mf">0.2100701609574907</span><span class="p">,</span> <span class="mf">0.18429158110882957</span><span class="p">,</span> <span class="mf">0.13543721236028927</span><span class="p">],</span>
+<span class="s2">&quot;twee_diabetes&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.16666666666666666</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1111111111111111</span><span class="p">,</span> <span class="mf">0.1643835616438356</span><span class="p">,</span> <span class="mf">0.21724137931034482</span><span class="p">,</span> <span class="mf">0.2807017543859649</span><span class="p">,</span> <span class="mf">0.342512908777969</span><span class="p">,</span> <span class="mf">0.34311328443357786</span><span class="p">,</span> <span class="mf">0.2613240418118467</span><span class="p">]</span>
+       <span class="p">}</span>
+<span class="n">fig3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Geen aandoeningen&quot;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;leeftijdscategorieën&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;geen_problemen&quot;</span><span class="p">],</span>
+            <span class="n">offsetgroup</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Hartziekte&quot;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;leeftijdscategorieën&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;hart&quot;</span><span class="p">],</span>
+            <span class="n">offsetgroup</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;indianred&#39;</span><span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Hoge bloedruk&quot;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;leeftijdscategorieën&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;hyper&quot;</span><span class="p">],</span>
+            <span class="n">offsetgroup</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">base</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;hart&quot;</span><span class="p">],</span>
+            <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;mediumvioletred&#39;</span><span class="p">)</span>
+        <span class="p">),</span>
+         <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Beide aandoeningen&quot;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;leeftijdscategorieën&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;twee_diabetes&quot;</span><span class="p">],</span>
+            <span class="n">offsetgroup</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">layout</span><span class="o">=</span><span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Natuurlijke aandoeningen invloed op Diabetes&quot;</span><span class="p">,</span>
+        <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Number of Issues in %&quot;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig3</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/4537d2fb97dd9163fba60614dfdf1a4e5345afd65d2f4aebf25d5366c2bedad9.png" src="_images/4537d2fb97dd9163fba60614dfdf1a4e5345afd65d2f4aebf25d5366c2bedad9.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="arg-1-leeftijdsgebonden-comorbiditeiten-bij-diabetes-de-last-van-hypertensie-en-hartziekte-in-verschillende-leeftijdsgroepen-onderzoeken">
+<h2>Arg 1: Leeftijdsgebonden comorbiditeiten bij diabetes: De last van hypertensie en hartziekte in verschillende leeftijdsgroepen onderzoeken<a class="headerlink" href="#arg-1-leeftijdsgebonden-comorbiditeiten-bij-diabetes-de-last-van-hypertensie-en-hartziekte-in-verschillende-leeftijdsgroepen-onderzoeken" title="Permalink to this heading">#</a></h2>
+<p>Hierbij richten we ons op de leeftijdsgebonden comorbiditeiten bij mensen met diabetes, in het bijzonder hypertensie (hoge bloeddruk) en hartziekte. We willen de last van deze aandoeningen onderzoeken en begrijpen hoe deze last varieert tussen verschillende leeftijdsgroepen. Door deze informatie te verzamelen, kunnen we inzichten verkrijgen die van belang zijn voor de diagnose en behandeling van diabetes.</p>
+<p>Uit de grafiek blijkt dat naarmate mensen ouder worden, de prevalentie van comorbiditeiten bij diabetes toeneemt. In elke leeftijdscategorie zien we een duidelijk patroon: de bar voor mensen met 2 aandoeningen (hypertensie en hartziekte) is het grootst, gevolgd door de bar voor mensen met 1 aandoening en daarna de bar voor mensen zonder aandoeningen. Dit wijst op een sterke associatie tussen leeftijd en de aanwezigheid van hypertensie en hartziekte bij mensen met diabetes.</p>
+<p>Deze bevindingen benadrukken het belang van het monitoren en behandelen van comorbiditeiten, vooral hypertensie en hartziekte, bij oudere patiënten met diabetes. Door deze risicofactoren op basis van leeftijd te identificeren, kunnen we een gerichtere aanpak hanteren bij de diagnose en behandeling.</p>
+<p>Het gericht monitoren en effectief behandelen van hypertensie en hartziekte bij oudere patiënten met diabetes kan de algehele gezondheidstoestand verbeteren en het risico op complicaties verminderen. Het is van groot belang om deze bevindingen toe te passen in de klinische praktijk en strategieën te ontwikkelen die zich richten op de preventie en beheersing van comorbiditeiten bij oudere mensen met diabetes.</p>
+<p>Door rekening te houden met leeftijdsgerelateerde risicofactoren en het implementeren van geïndividualiseerde zorgplannen, kunnen we een gepersonaliseerde aanpak bieden voor het beheer van diabetes en comorbiditeiten. Dit kan de gezondheidsresultaten van mensen met diabetes verbeteren en de last van comorbiditeiten verminderen, wat uiteindelijk een positieve impact heeft op hun kwaliteit van leven.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Diabetic&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-diabetic&#39;</span><span class="p">]</span>
+<span class="n">labels2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;Heart disease&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-diabetic&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create subplots: use &#39;domain&#39; type for Pie subplot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;domain&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;domain&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;domain&#39;</span><span class="p">}]],</span>
+                   <span class="n">subplot_titles</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Beide: 358&#39;</span><span class="p">,</span> <span class="s1">&#39;1 van beide: 2088&#39;</span><span class="p">,</span> <span class="s1">&#39;0 Aandoeningen: 5503&#39;</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Pie</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="mi">358</span><span class="p">,</span> <span class="mi">916</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;2-problems&quot;</span><span class="p">),</span>
+              <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Pie</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">labels2</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="mi">2088</span><span class="p">,</span> <span class="mi">1267</span><span class="p">,</span> <span class="mi">9595</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mediumvioletred&#39;</span><span class="p">,</span> <span class="s1">&#39;indianred&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;1-problem&quot;</span><span class="p">),</span>
+              <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Pie</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="mi">5503</span><span class="p">,</span> <span class="mi">89489</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;0-problems&quot;</span><span class="p">),</span>
+              <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">textinfo</span><span class="o">=</span><span class="s1">&#39;percent&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">hole</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">hoverinfo</span><span class="o">=</span><span class="s2">&quot;label+percent+name&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;Influence of heart disease and hypertension on Diabetes&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/50e38d5022051a036ac0b915982a12b97a63117441290fec7e711a120fd28429.png" src="_images/50e38d5022051a036ac0b915982a12b97a63117441290fec7e711a120fd28429.png" />
+</div>
+</div>
+<p>Uit de donutgrafiek kunnen we waardevolle inzichten halen met betrekking tot de relatie tussen het aantal comorbiditeiten en de prevalentie van diabetes. De donutgrafiek bestaat uit drie delen, waarbij elk deel de verdeling van diabetes laat zien binnen specifieke groepen. We kunnen observeren dat naarmate het aantal comorbiditeiten toeneemt, het percentage mensen met diabetes ook stijgt. Dit patroon suggereert een sterke associatie tussen de aanwezigheid van meerdere aandoeningen en het verhoogde risico op diabetes. Deze bevinding ondersteunt het argument dat comorbiditeiten een belangrijke rol spelen bij de diagnose en behandeling van diabetes. Bovendien benadrukt de donutgrafiek het belang van het effectief beheren en behandelen van comorbiditeiten om de diabetes uitkomsten te verbeteren. Het biedt ook inzicht in het potentieel van preventieve maatregelen en geïntegreerde zorgstrategieën om de ontwikkeling van diabetes te voorkomen of te vertragen bij mensen met comorbiditeiten.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">dcc</span>
+<span class="kn">from</span> <span class="nn">dash.dependencies</span> <span class="kn">import</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+
+
+
+
+<span class="k">def</span> <span class="nf">show_filtered_plot</span><span class="p">():</span>
+<span class="c1">#     test = df[df.leeftijdscategorie == leeftijd]</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">df</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="o">.</span><span class="n">gender</span> <span class="o">!=</span> <span class="s1">&#39;Other&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Group the data by gender and calculate the counts for each condition</span>
+    <span class="n">grouped</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)[[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;heart_disease&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+    <span class="c1"># Define the data for each condition</span>
+    <span class="n">data_hypertension</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;hypertension&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Hypertension&#39;</span><span class="p">)</span>
+    <span class="n">data_heart_disease</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;heart_disease&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Heart Disease&#39;</span><span class="p">)</span>
+    <span class="n">data_diabetes</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">grouped</span><span class="p">[</span><span class="s1">&#39;diabetes&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Diabetes&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Create the grouped bar chart</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">data_hypertension</span><span class="p">,</span> <span class="n">data_heart_disease</span><span class="p">,</span> <span class="n">data_diabetes</span><span class="p">])</span>
+
+    <span class="c1"># Customize the chart layout</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Prevalence of Diabetes, Hypertension, and Heart Disease by Gender&#39;</span><span class="p">,</span>
+        <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Gender&#39;</span><span class="p">),</span>
+        <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">),</span>
+        <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Show the chart</span>
+    <span class="k">return</span> <span class="n">fig</span>
+
+
+<span class="c1"># external_stylesheets = [&#39;https://codepen.io/chriddyp/pen/bWLwgP.css&#39;]</span>
+<span class="c1"># app = Dash(__name__, external_stylesheets=external_stylesheets)</span>
+<span class="c1"># leeftijden = list(df.leeftijdscategorie.sort_values().unique())        </span>
+
+<span class="c1"># app.layout = html.Div(id=&#39;parent&#39;, children=[</span>
+<span class="c1">#     html.H1(id=&#39;H1&#39;, children=&#39;Diabetes en risicofactoren&#39;, style={&#39;textAlign&#39;: &#39;center&#39;, &#39;marginTop&#39;: 40, &#39;marginBottom&#39;: 40}),</span>
+<span class="c1">#     dcc.Graph(id=&#39;bars&#39;, figure=show_filtered_plot(&#39;0-10&#39;)),</span>
+<span class="c1">#     dcc.Slider(</span>
+<span class="c1">#         min=0,</span>
+<span class="c1">#         max=len(leeftijden) - 1,</span>
+<span class="c1">#         step=1,</span>
+<span class="c1">#         value=1,</span>
+<span class="c1">#         id=&#39;slider-leeftijd&#39;,</span>
+<span class="c1">#         marks={i: cat for i, cat in enumerate(leeftijden)}</span>
+<span class="c1">#     ),</span>
+<span class="c1"># ])</span>
+
+<span class="c1"># @app.callback(</span>
+<span class="c1">#     Output(&#39;bars&#39;, &#39;figure&#39;),</span>
+<span class="c1">#     Input(&#39;slider-leeftijd&#39;, &#39;value&#39;)</span>
+<span class="c1"># )</span>
+<span class="c1"># def update_plot(leeftijd):</span>
+<span class="c1">#     return show_filtered_plot(leeftijden[leeftijd])</span>
+
+<span class="c1"># if __name__ == &#39;__main__&#39;:</span>
+<span class="c1">#     app.run_server(debug=True)</span>
+<span class="n">show_filtered_plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/7c73281dc71a9f1ceed66123312d5416b4eb1708531dc1f14e585e0802a33f5e.png" src="_images/7c73281dc71a9f1ceed66123312d5416b4eb1708531dc1f14e585e0802a33f5e.png" />
+</div>
+</div>
+<p>Op jonge leeftijd, is diabetes duidelijk een op zichzelf staand probleem, dat geen samenhang heeft met de andere klachten die zijn bekeken. Op latere leeftijd, nemen hoge bloeddruk, hartziekte en diabetes in hoeveelheid toe. Hoge bloeddruk en diabetes stijgen met de leeftijd ongeveer even hard.
+Dan is duidelijk een correlatie tussen de verschillende factoren te zien.</p>
+<p>De grafiek is in jupyter-book helaas niet werkend interactief. In de afzonderlijke notebook is dit wel het geval. Hierboven zijn de totalen weergegevens. De interactieve chart geeft de getallen per leeftijdsgroep.</p>
+</section>
+<section id="arg-2-geslachtsgebonden-verschillen-in-diabetespreventie-wijzen-op-de-invloed-van-demografische-factoren-op-de-diagnose-van-diabetes">
+<h2>Arg 2: Geslachtsgebonden verschillen in diabetespreventie wijzen op de invloed van demografische factoren op de diagnose van diabetes.<a class="headerlink" href="#arg-2-geslachtsgebonden-verschillen-in-diabetespreventie-wijzen-op-de-invloed-van-demografische-factoren-op-de-diagnose-van-diabetes" title="Permalink to this heading">#</a></h2>
+<p>We willen de verschillen in diabetes prevalentie onderzoeken die geslachtsgebonden zijn omdat het inzicht biedt in de rol van demografische factoren bij de diagnose van diabetes. Door te begrijpen hoe geslacht de prevalentie van diabetes beïnvloedt, kunnen gezondheidsprofessionals gerichtere screenings- en preventiestrategieën ontwikkelen. Bovendien kan het identificeren van demografische factoren die bijdragen aan geslachtsverschillen in diabetes leiden tot meer gender gerichte en gepersonaliseerde benaderingen voor de diagnose, behandeling en beheersing van diabetes, wat kan bijdragen aan een betere gezondheidszorg voor individuen van beide geslachten.</p>
+<p>De bar chart onthult opvallende verschillen in diabetesprevalentie tussen beide geslachten. Mannen vertonen bij elke leeftijdscategorie een hogere diabetesprevalentie dan vrouwen. Deze bevinding ondersteunt het argument dat demografische factoren, zoals geslacht, een significante invloed hebben op de diagnose van diabetes. Het wijst op mogelijk biologische, hormonale en sociaaleconomische factoren die bijdragen aan de hogere diabetesprevalentie onder mannen. Het belang van gendergerichte screenings- en preventieprogramma’s en aangepaste behandelingen wordt benadrukt. Het identificeren van geslachtsgebonden verschillen in diabetesprevalentie kan leiden tot verbeterde gezondheid strategieën en gepersonaliseerde interventies. Deze bevindingen pleiten voor gendergelijkheid in de gezondheidszorg en benadrukken de noodzaak om de ongelijkheden aan te pakken die bijdragen aan de hogere diabetes last onder mannen. De grafiek biedt overtuigend bewijs dat demografische factoren, met name geslacht, van invloed zijn op de diagnose en behandeling van diabetes, en benadrukt het belang van gender gerichte gezondheidszorg maatregelen.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">leeftijdscategorieën</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0-10&#39;</span><span class="p">,</span> <span class="s1">&#39;10-20&#39;</span><span class="p">,</span> <span class="s1">&#39;20-30&#39;</span><span class="p">,</span> <span class="s1">&#39;30-40&#39;</span><span class="p">,</span> <span class="s1">&#39;40-50&#39;</span><span class="p">,</span> <span class="s1">&#39;50-60&#39;</span><span class="p">,</span> <span class="s1">&#39;60-70&#39;</span><span class="p">,</span> <span class="s1">&#39;70-80&#39;</span><span class="p">,</span> <span class="s1">&#39;80-90&#39;</span><span class="p">]</span>
+<span class="n">mannen_diabetes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0015888778550148957</span><span class="p">,</span> <span class="mf">0.008424599831508003</span><span class="p">,</span> <span class="mf">0.015755329008341055</span><span class="p">,</span> <span class="mf">0.04045407636738906</span><span class="p">,</span> <span class="mf">0.08319068812050667</span><span class="p">,</span> <span class="mf">0.14799805479007944</span><span class="p">,</span> <span class="mf">0.21989215098861595</span><span class="p">,</span> <span class="mf">0.24083457526080476</span><span class="p">,</span> <span class="mf">0.1982962612399432</span><span class="p">]</span>
+<span class="n">vrouwen_diabetes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0029623360135421074</span><span class="p">,</span> <span class="mf">0.008540372670807454</span><span class="p">,</span> <span class="mf">0.011838522552385463</span><span class="p">,</span> <span class="mf">0.029246892517669997</span><span class="p">,</span> <span class="mf">0.058628571428571426</span><span class="p">,</span> <span class="mf">0.10884823380508572</span><span class="p">,</span> <span class="mf">0.1709729809537871</span><span class="p">,</span> <span class="mf">0.19562688997441266</span><span class="p">,</span> <span class="mf">0.1724629418472064</span><span class="p">]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">leeftijdscategorieën</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">mannen_diabetes</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Mannen&#39;</span><span class="p">,</span>
+    <span class="n">marker_color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span>
+<span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">leeftijdscategorieën</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">vrouwen_diabetes</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Vrouwen&#39;</span><span class="p">,</span>
+    <span class="n">marker_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span>
+<span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Percentage mannen en vrouwen met diabetes per leeftijdscategorie&#39;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Leeftijdscategorie&#39;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Percentage&#39;</span><span class="p">,</span>
+    <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/cc636c4bd71f39a798f752a0b7cbb95503d7117d48ffd916c281ae7967ca1316.png" src="_images/cc636c4bd71f39a798f752a0b7cbb95503d7117d48ffd916c281ae7967ca1316.png" />
+</div>
+</div>
+<p>Net zoals geslacht kan je duidelijk zien dat leeftijd ook een grote impact heeft op diabetes.
+Leeftijd speelt een grote rol bij de ontwikkeling van diabetes. Zo hebben mensen na hun 40ste een grote kans op het ontwikkelen van diabetes type 2. Uit de grafiek is dit ook zeer zichtbaar, na interval 30-40 verdubbeld het aantal gevallen bij mannen en groeit het ook bij de vrouwen.</p>
+</section>
+<section id="perspectief-2-levensstijlfactoren-en-diabetes">
+<h2>Perspectief 2: Levensstijlfactoren en Diabetes<a class="headerlink" href="#perspectief-2-levensstijlfactoren-en-diabetes" title="Permalink to this heading">#</a></h2>
+<p>In Perspectief 2 zullen we ons richten op de invloed van levensstijlfactoren op het risico en beheer van diabetes. Door de geschiedenis van roken en het niveau van fysieke activiteit te onderzoeken, streven we ernaar te begrijpen hoe deze levensstijlkeuzes bijdragen aan het ontstaan en de controle van diabetes. Door middel van data-analyse kunnen we de associatie tussen levensstijlfactoren en diabetesresultaten blootleggen. Dit perspectief benadrukt het belang van het aannemen van gezonde gedragingen, zoals stoppen met roken en regelmatig fysiek actief zijn, om diabetes effectief te voorkomen en te beheersen. Door de rol van levensstijlveranderingen te benadrukken, kunnen we individuen in staat stellen om geïnformeerde beslissingen te nemen en de regie over hun gezondheid te nemen.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;~/Desktop/diabetes_prediction_dataset.csv&#39;</span><span class="p">)</span>
+
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;leeftijdscategorie&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;0-10&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;10-20&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;20-30&#39;</span><span class="p">,</span> 
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;30-40&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;40-50&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">,</span> <span class="s1">&#39;50-60&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">,</span> <span class="s1">&#39;60-70&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;70-80&#39;</span><span class="p">,</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">,</span> <span class="s1">&#39;80-90&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=90&#39;</span>    
+<span class="p">)))))))))</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;leeftijdscategorie&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">,</span> <span class="s1">&#39;hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;heart_disease&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;leeftijdscategorie&#39;</span><span class="p">,</span> <span class="s1">&#39;hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;heart_disease&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;diabetes&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">]}</span>
+<span class="p">)</span>
+<span class="n">total</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">total</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">total</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">total</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="p">[</span><span class="s1">&#39;diabetes_sum&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">total</span><span class="p">[</span><span class="s1">&#39;diabetes_count&#39;</span><span class="p">]</span>
+<span class="n">total</span><span class="p">[</span><span class="s1">&#39;num_problems&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span><span class="o">.</span><span class="n">hypertension</span> <span class="o">+</span> <span class="n">total</span><span class="o">.</span><span class="n">heart_disease</span>
+<span class="c1"># total = df[[&#39;leeftijdscategorie&#39;, &#39;diabetes&#39;, &#39;gender&#39;]].groupby([&#39;leeftijdscategorie&#39;, &#39;gender&#39;]).agg(</span>
+<span class="c1">#     {&#39;diabetes&#39;: [&#39;sum&#39;, &#39;count&#39;]})</span>
+
+<span class="c1"># total.columns = [&#39;_&#39;.join(col) for col in total.columns.values]</span>
+<span class="c1"># total = total.reset_index()</span>
+<span class="c1"># total[&#39;percentage&#39;] = total[&#39;diabetes_sum&#39;] / total[&#39;diabetes_count&#39;]</span>
+<span class="c1"># total = total[[&#39;leeftijdscategorie&#39;, &#39;gender&#39;, &#39;percentage&#39;]].pivot_tab</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="id1">
+<h2>Perspectief 2: Levensstijlfactoren en Diabetes<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>In Perspectief 2 zullen we ons richten op de invloed van levensstijlfactoren op het risico en beheer van diabetes. Door de geschiedenis van roken en het niveau van fysieke activiteit te onderzoeken, streven we ernaar te begrijpen hoe deze levensstijlkeuzes bijdragen aan het ontstaan en de controle van diabetes. Door middel van data-analyse kunnen we de associatie tussen levensstijlfactoren en diabetesresultaten blootleggen. Dit perspectief benadrukt het belang van het aannemen van gezonde gedragingen, zoals stoppen met roken en regelmatig fysiek actief zijn, om diabetes effectief te voorkomen en te beheersen. Door de rol van levensstijlveranderingen te benadrukken, kunnen we individuen in staat stellen om geïnformeerde beslissingen te nemen en de regie over hun gezondheid te nemen.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bmi</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;bmi&#39;</span><span class="p">]</span>
+<span class="n">diabetes_status</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;diabetes&#39;</span><span class="p">]</span>
+
+<span class="c1"># Bepaal de stappen voor de x-as</span>
+<span class="n">x_steps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Bereken het totaal aantal personen per BMI-categorie</span>
+<span class="n">total_count</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">bmi</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">x_steps</span><span class="p">)</span>
+
+<span class="c1"># Bereken het aantal personen met diabetes per BMI-categorie</span>
+<span class="n">diabetes_count</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">bmi</span><span class="p">[</span><span class="n">diabetes_status</span> <span class="o">==</span> <span class="mi">1</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">x_steps</span><span class="p">)</span>
+
+<span class="c1"># Bereken het percentage mensen met diabetes</span>
+<span class="c1"># diabetes_percentage = np.where(</span>
+<span class="c1">#     total_count &gt; 0, (diabetes_count / total_count) * 100, 0)</span>
+
+<span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">invalid</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">):</span>
+    <span class="n">diabetes_percentage</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">true_divide</span><span class="p">(</span><span class="n">diabetes_count</span><span class="p">,</span><span class="n">total_count</span><span class="p">)</span><span class="o">*</span> <span class="mi">100</span>
+
+
+<span class="c1"># Definieer de staafdiagrammen</span>
+<span class="n">trace_diabetes</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">x_steps</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">diabetes_percentage</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Met diabetes&#39;</span><span class="p">,</span>
+    <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">),</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="p">)</span>
+
+
+<span class="c1"># Maak de layout van de grafiek</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;BMI en Diabetes Percentage&#39;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">95</span><span class="p">]),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Percentage mensen&#39;</span><span class="p">),</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Maak een figuur en voeg de staafdiagrammen toe</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">trace_diabetes</span><span class="p">],</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="c1"># Toon het staafdiagram</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/b2b7ad507eca36d7dfb6872a2b14a89a9144dc4db39ff791f76cd991f1ea9015.png" src="_images/b2b7ad507eca36d7dfb6872a2b14a89a9144dc4db39ff791f76cd991f1ea9015.png" />
+</div>
+</div>
+<section id="arg-1-de-rol-van-bmi-als-risicofactor-voor-diabetes-een-grafische-analyse">
+<h3>Arg 1: De rol van BMI als risicofactor voor diabetes: een grafische analyse<a class="headerlink" href="#arg-1-de-rol-van-bmi-als-risicofactor-voor-diabetes-een-grafische-analyse" title="Permalink to this heading">#</a></h3>
+<p>We willen begrijpen wat de relatie tussen BMI en diabetes is. Het is belangrijk om te weten dat hogere BMI-waarden geassocieerd zijn met een verhoogd risico op het ontwikkelen van diabetes. Deze kennis benadrukt het belang van het bevorderen van een gezond gewicht en het nemen van maatregelen om obesitas te voorkomen.</p>
+<p>Uit de bar chart die BMI afzet tegen het percentage mensen met diabetes, blijkt een duidelijk verband tussen hogere BMI-waarden en een verhoogd risico op diabetes. De grafiek laat zien dat naarmate BMI stijgt, het percentage mensen met diabetes ook toeneemt. Dit ondersteunt het argument dat lifestylefactoren, zoals overgewicht en obesitas, een significante rol spelen bij het ontstaan en de ontwikkeling van diabetes.</p>
+<p>Deze bevinding benadrukt het belang van het bevorderen van gezonde levensstijlkeuzes, met name gericht op het handhaven van een gezond gewicht en het voorkomen van obesitas. Het wijst op de noodzaak van preventieve maatregelen, zoals het bevorderen van lichamelijke activiteit, het verbeteren van de voedingsgewoonten en het bieden van ondersteuning bij gewichtsbeheersing. Door bewustzijn te creëren over de relatie tussen BMI en diabetes, kunnen individuen worden aangemoedigd om proactief te handelen en hun levensstijl aan te passen om het risico op diabetes te verminderen.</p>
+<p>Bovendien biedt de bar chart waardevolle informatie voor zorgverleners en beleidsmakers. Het onderstreept de behoefte aan screening en vroegtijdige interventie bij mensen met een verhoogd BMI om de diagnose en behandeling van diabetes te verbeteren. Daarnaast benadrukt het de noodzaak van beleidsmaatregelen gericht op het bevorderen van gezonde voeding en fysieke activiteit in de bredere gemeenschap</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_never_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;never&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_never_0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;never&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">total_never</span> <span class="o">=</span> <span class="n">count_never_1</span><span class="o">+</span><span class="n">count_never_0</span> 
+<span class="n">perc_never</span> <span class="o">=</span> <span class="n">count_never_1</span><span class="o">/</span><span class="n">total_never</span>
+
+
+<span class="n">count_former_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;former&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_former_0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;former&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_notcurrent_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;not current&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_notcurrent_0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;not current&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">total_oudrokers_1</span> <span class="o">=</span> <span class="n">count_former_1</span> <span class="o">+</span> <span class="n">count_notcurrent_1</span>
+<span class="n">total_oudrokers_0</span> <span class="o">=</span> <span class="n">count_former_0</span> <span class="o">+</span> <span class="n">count_notcurrent_0</span>
+
+<span class="n">total_oudrokers</span> <span class="o">=</span> <span class="n">total_oudrokers_1</span> <span class="o">+</span> <span class="n">total_oudrokers_0</span> 
+<span class="n">perc_oudrokers</span> <span class="o">=</span> <span class="n">total_oudrokers_1</span> <span class="o">/</span> <span class="n">total_oudrokers</span>
+
+
+<span class="n">count_ever_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ever&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_ever_0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ever&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_current_1</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;current&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count_current_0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;current&#39;</span><span class="p">,</span> <span class="s1">&#39;diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">total_rokers_1</span> <span class="o">=</span> <span class="n">count_ever_1</span> <span class="o">+</span> <span class="n">count_current_1</span>
+<span class="n">total_rokers_0</span> <span class="o">=</span> <span class="n">count_ever_0</span> <span class="o">+</span> <span class="n">count_current_0</span>
+
+<span class="n">total_rokers</span> <span class="o">=</span> <span class="n">total_rokers_1</span> <span class="o">+</span> <span class="n">total_rokers_0</span> 
+<span class="n">perc_rokers</span> <span class="o">=</span> <span class="n">total_rokers_1</span> <span class="o">/</span> <span class="n">total_rokers</span>
+
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">rookcategorieën</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nooit gerookt&#39;</span><span class="p">,</span> <span class="s1">&#39;ooit gerookt&#39;</span><span class="p">,</span> <span class="s1">&#39;rokende&#39;</span><span class="p">]</span>
+<span class="n">percentages</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.09534121669753526</span><span class="p">,</span> <span class="mf">0.1443129311981771</span><span class="p">,</span> <span class="mf">0.10684725357411588</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">rookcategorieën</span><span class="p">,</span> <span class="n">percentages</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Rookcategorieën&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Percentage&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Verdeling van rookcategorieën&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;rookcategorie&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;current&#39;</span><span class="p">,</span> <span class="s1">&#39;rookt&#39;</span><span class="p">,</span>
+                              <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ever&#39;</span><span class="p">,</span> <span class="s1">&#39;rookt&#39;</span><span class="p">,</span>
+                                       <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;not current&#39;</span><span class="p">,</span> <span class="s1">&#39;ooit gerookt&#39;</span><span class="p">,</span>
+                                                <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;former&#39;</span><span class="p">,</span> <span class="s1">&#39;ooit gerookt&#39;</span><span class="p">,</span>
+                                                         <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;never&#39;</span><span class="p">,</span> <span class="s1">&#39;nooit gerookt&#39;</span><span class="p">,</span>
+                                                                  <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;smoking_history&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;No Info&#39;</span><span class="p">,</span> <span class="s1">&#39;No Info&#39;</span><span class="p">,</span> <span class="s1">&#39;onbekend&#39;</span><span class="p">)</span>
+
+                                                                           <span class="p">)</span>
+                                                                  <span class="p">)</span>
+                                                         <span class="p">)</span>
+                                                <span class="p">)</span>
+                                       <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/dc799a0cad55216a4304dac033bb01353352cfcebd89c56b65e61e074d45ee61.png" src="_images/dc799a0cad55216a4304dac033bb01353352cfcebd89c56b65e61e074d45ee61.png" />
+</div>
+</div>
+</section>
+<section id="arg-2-roken-speelt-geen-grote-rol-op-diabetes">
+<h3>Arg 2: Roken speelt geen grote rol op diabetes<a class="headerlink" href="#arg-2-roken-speelt-geen-grote-rol-op-diabetes" title="Permalink to this heading">#</a></h3>
+<p>Uit onderzoek van het CBR blijkt dat mensen die roken een groter risico op diabetes hebben. Uit onze bar chart zien we eigenlijk het tegenovergestelde. Namelijk dat roken weinig invloed uitoefent op het krijgen van diabetes. Zo kan het dus niet worden gedefinieerd als een factor voor diabetes waar de mens zelf invloed op uitoefent.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;~/Desktop/diabetes_prediction_dataset.csv&#39;</span><span class="p">)</span>
+
+
+
+<span class="n">bloedglucoselevel</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;blood_glucose_level&#39;</span><span class="p">]</span>
+<span class="n">hbac1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;HbA1c_level&#39;</span><span class="p">]</span>
+<span class="n">diabetes_status</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;diabetes&#39;</span><span class="p">]</span>
+
+<span class="c1"># Combineer de data in een DataFrame</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Bloedglucoselevel&#39;</span><span class="p">:</span> <span class="n">bloedglucoselevel</span><span class="p">,</span> <span class="s1">&#39;HbA1c&#39;</span><span class="p">:</span> <span class="n">hbac1</span><span class="p">,</span> <span class="s1">&#39;Diabetes&#39;</span><span class="p">:</span> <span class="n">diabetes_status</span><span class="p">})</span>
+
+<span class="c1"># Bepaal de bins voor de heatmap</span>
+<span class="n">glucose_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">hba1c_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">9.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Maak de heatmap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Bloedglucoselevel&#39;</span><span class="p">],</span> <span class="n">glucose_bins</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;HbA1c&#39;</span><span class="p">],</span> <span class="n">hba1c_bins</span><span class="p">)])[</span><span class="s1">&#39;Diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.1%&quot;</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.0f%%</span><span class="s1">&#39;</span><span class="p">},</span> <span class="n">mask</span><span class="o">=</span><span class="n">heatmap_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;HbA1c&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Bloedglucoselevel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Percentage mensen met diabetes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;~/Desktop/diabetes_prediction_dataset.csv&#39;</span><span class="p">)</span>
+
+
+
+<span class="n">bloedglucoselevel</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;blood_glucose_level&#39;</span><span class="p">]</span>
+<span class="n">hbac1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;HbA1c_level&#39;</span><span class="p">]</span>
+<span class="n">diabetes_status</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;diabetes&#39;</span><span class="p">]</span>
+
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Bloedglucoselevel&#39;</span><span class="p">:</span> <span class="n">bloedglucoselevel</span><span class="p">,</span> <span class="s1">&#39;HbA1c&#39;</span><span class="p">:</span> <span class="n">hbac1</span><span class="p">,</span> <span class="s1">&#39;Diabetes&#39;</span><span class="p">:</span> <span class="n">diabetes_status</span><span class="p">})</span>
+
+<span class="c1"># Bepaal de bins voor de heatmap</span>
+<span class="n">glucose_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">hba1c_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">9.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Maak de heatmap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">heatmap_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Bloedglucoselevel&#39;</span><span class="p">],</span> <span class="n">glucose_bins</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;HbA1c&#39;</span><span class="p">],</span> <span class="n">hba1c_bins</span><span class="p">)])[</span><span class="s1">&#39;Diabetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">heatmap_data</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;.1%&quot;</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.0f%%</span><span class="s1">&#39;</span><span class="p">},</span> <span class="n">mask</span><span class="o">=</span><span class="n">heatmap_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">(),</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;HbA1c&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Bloedglucoselevel&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/3cdf1b989dce4f7278918921a65e5b918d7954151a601bbbd22b7f336bc5eae1.png" src="_images/3cdf1b989dce4f7278918921a65e5b918d7954151a601bbbd22b7f336bc5eae1.png" />
+<img alt="_images/b482674eed4ebda4add0110ed15dd5618b3f553c0361a372d723c324c6f11b1a.png" src="_images/b482674eed4ebda4add0110ed15dd5618b3f553c0361a372d723c324c6f11b1a.png" />
+</div>
+</div>
+</section>
+<section id="arg3-verband-tussen-bloedglucose-level-hemoglobine-a1c-level-en-diabetesrisico">
+<h3>Arg3: Verband tussen bloedglucose level , hemoglobine A1c level en diabetesrisico.<a class="headerlink" href="#arg3-verband-tussen-bloedglucose-level-hemoglobine-a1c-level-en-diabetesrisico" title="Permalink to this heading">#</a></h3>
+<p>Het belang van het aannemen van gezonde gedragingen wordt verduidelijkt door de figuur die een duidelijk verband tussen zowel bloedglucose level (y-as) en hemoglobine level (x-as) ten opzichte van diabetes ziet. De hemoglobine waarden lopen van 3,5 tot 9, iedereen onder de 5 heeft geen diabetes en iedereen boven de 7 heeft wel diabetes. De bloedglucosewaarden lopen van 80 tot 300, iedereen onder de 120 heeft geen diabetes en iedereen boven de 200 heeft wel diabetes. Dan is er nog een gebied tussen deze waardes waarin niet iedereen wel of niet diabetes heeft, over dit gebied valt niet veel te zeggen behalve dat hoe hoger de waardes van zowel bloedglucose en hemoglobine hoe groter de kans op diabetes. Aan de hand van deze informatie kunnen er preventie maatregelen genomen worden voor diabetes bij bepaalde patiënten.</p>
+</section>
+</section>
+<section id="reflectie">
+<h2>Reflectie<a class="headerlink" href="#reflectie" title="Permalink to this heading">#</a></h2>
+<p>We hebben ervoor gezorgd dat we interactieve plotjes hebben toegevoegd, met behulp van sliders, om de gebruikerservaring te verbeteren en de visualisaties dynamischer te maken. Bovendien hebben we gestreefd naar een consistente stijl voor al onze figuren, zodat de presentatie overzichtelijk en professioneel oogt.</p>
+<p>Daarnaast hebben we ons gericht op het duidelijk definiëren van de argumenten die we willen ondersteunen met behulp van de plotjes. We hebben ervoor gezorgd dat de boodschap en het doel van elke visualisatie helder zijn, zodat de lezer gemakkelijk de verbanden en conclusies kan begrijpen.</p>
+<p>Om de leesbaarheid te verbeteren, hebben we besloten om de laatste twee onleesbare plotjes te vervangen door meer geschikte grafieken, zoals barplots of heatmaps, die de gegevens beter weergeven en de argumenten ondersteunen.</p>
+<p>Met deze aanpassingen hebben we ons gericht op het creëren van visualisaties die onze argumenten duidelijk en effectief ondersteunen. We zijn dankbaar voor de feedback en zijn vastbesloten om ons project tot een succesvolle afronding te brengen.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import pandas as pd</span>
+<span class="c1"># from bokeh.plotting import figure, show</span>
+<span class="c1"># from bokeh.models import ColumnDataSource, CustomJS</span>
+<span class="c1"># from bokeh.io import output_notebook</span>
+<span class="c1"># from bokeh.layouts import column</span>
+<span class="c1"># from bokeh.models.widgets import Select</span>
+
+
+<span class="c1"># def show_filtered_plot(leeftijd):</span>
+<span class="c1">#     test = df[df.leeftijdscategorie == leeftijd]</span>
+<span class="c1">#     test = test[test.gender != &#39;Other&#39;]</span>
+
+<span class="c1">#     # Group the data by gender and calculate the counts for each condition</span>
+<span class="c1">#     grouped = test.groupby(&#39;gender&#39;)[[&#39;hypertension&#39;, &#39;heart_disease&#39;, &#39;diabetes&#39;]].sum().reset_index()</span>
+
+<span class="c1">#     # Create a ColumnDataSource for the grouped data</span>
+<span class="c1">#     source = ColumnDataSource(grouped)</span>
+
+<span class="c1">#     # Define the data for each condition</span>
+<span class="c1">#     conditions = [&#39;hypertension&#39;, &#39;heart_disease&#39;, &#39;diabetes&#39;]</span>
+<span class="c1">#     colors = [&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;]</span>
+<span class="c1">#     legend_labels = [&#39;Hypertension&#39;, &#39;Heart Disease&#39;, &#39;Diabetes&#39;]</span>
+
+<span class="c1">#     # Create the figure and bars for each condition</span>
+<span class="c1">#     p = figure(x_range=grouped[&#39;gender&#39;], outer_width=600, outer_height=400, title=&#39;Prevalence of Diabetes, Hypertension, and Heart Disease by Gender&#39;)</span>
+<span class="c1">#     bars = p.vbar_stack(conditions, x=&#39;gender&#39;, width=0.5, color=colors, legend_label=legend_labels, source=source)</span>
+
+<span class="c1">#     # Customize the chart layout</span>
+<span class="c1">#     p.xaxis.axis_label = &#39;Gender&#39;</span>
+<span class="c1">#     p.yaxis.axis_label = &#39;Count&#39;</span>
+<span class="c1">#     p.legend.location = &#39;top_right&#39;</span>
+<span class="c1">#     p.legend.orientation = &#39;horizontal&#39;</span>
+
+<span class="c1">#     return p</span>
+
+<span class="c1"># leeftijden = list(df.leeftijdscategorie.sort_values().unique())</span>
+
+<span class="c1"># leeftijd = Select(</span>
+<span class="c1">#     title=&#39;Leeftijdsgroepen&#39;,</span>
+<span class="c1">#     options=leeftijden,</span>
+<span class="c1">#     value=&#39;0-10&#39;</span>
+<span class="c1"># )</span>
+
+<span class="c1"># # Create the interactive plot</span>
+<span class="c1"># def interactive_plot():</span>
+<span class="c1">#     p = show_filtered_plot(leeftijd.value)</span>
+<span class="c1">#     layout.children[1] = p</span>
+
+<span class="c1"># leeftijd.js_on_change(&#39;value&#39;, CustomJS(code=&quot;&quot;&quot;</span>
+<span class="c1">#     interactive_plot();</span>
+<span class="c1"># &quot;&quot;&quot;))</span>
+
+<span class="c1"># # Create the initial plot</span>
+<span class="c1"># output_notebook()</span>
+<span class="c1"># p = show_filtered_plot(leeftijd.value)</span>
+
+<span class="c1"># # Create the layout</span>
+<span class="c1"># layout = column(leeftijd, p)</span>
+
+<span class="c1"># # Display the layout</span>
+<span class="c1"># show(layout)</span>
+
+
+<span class="c1"># import ipywidgets as widgets</span>
+<span class="c1"># from IPython.display import display</span>
+<span class="c1"># import plotly.graph_objects as go</span>
+
+<span class="c1"># def show_filtered_plot(leeftijd):</span>
+<span class="c1">#     test = df[df.leeftijdscategorie == leeftijd]</span>
+<span class="c1">#     test = test[test.gender != &#39;Other&#39;]</span>
+
+<span class="c1">#     # Group the data by gender and calculate the counts for each condition</span>
+<span class="c1">#     grouped = test.groupby(&#39;gender&#39;)[[&#39;hypertension&#39;, &#39;heart_disease&#39;, &#39;diabetes&#39;]].sum().reset_index()</span>
+
+<span class="c1">#     # Define the data for each condition</span>
+<span class="c1">#     data_hypertension = go.Bar(x=grouped[&#39;gender&#39;], y=grouped[&#39;hypertension&#39;], name=&#39;Hypertension&#39;)</span>
+<span class="c1">#     data_heart_disease = go.Bar(x=grouped[&#39;gender&#39;], y=grouped[&#39;heart_disease&#39;], name=&#39;Heart Disease&#39;)</span>
+<span class="c1">#     data_diabetes = go.Bar(x=grouped[&#39;gender&#39;], y=grouped[&#39;diabetes&#39;], name=&#39;Diabetes&#39;)</span>
+
+<span class="c1">#     # Create the grouped bar chart</span>
+<span class="c1">#     fig = go.Figure(data=[data_hypertension, data_heart_disease, data_diabetes])</span>
+
+<span class="c1">#     # Customize the chart layout</span>
+<span class="c1">#     fig.update_layout(</span>
+<span class="c1">#         title=&#39;Prevalence of Diabetes, Hypertension, and Heart Disease by Gender&#39;,</span>
+<span class="c1">#         xaxis=dict(title=&#39;Gender&#39;),</span>
+<span class="c1">#         yaxis=dict(title=&#39;Count&#39;),</span>
+<span class="c1">#         barmode=&#39;group&#39;</span>
+<span class="c1">#     )</span>
+
+<span class="c1">#     # Show the chart</span>
+<span class="c1">#     return fig</span>
+
+<span class="c1"># leeftijden = list(df.leeftijdscategorie.sort_values().unique())</span>
+
+<span class="c1"># leeftijd = widgets.SelectionSlider(</span>
+<span class="c1">#     options=leeftijden,</span>
+<span class="c1">#     value=&#39;0-10&#39;,</span>
+<span class="c1">#     description=&#39;Leeftijdsgroepen&#39;,</span>
+<span class="c1">#     disabled=False,</span>
+<span class="c1">#     continuous_update=False,</span>
+<span class="c1">#     orientation=&#39;horizontal&#39;,</span>
+<span class="c1">#     readout=True,</span>
+<span class="c1">#     layout=widgets.Layout(width=&#39;75%&#39;)</span>
+<span class="c1"># )</span>
+
+<span class="c1"># # Create a container to hold the chart</span>
+<span class="c1"># chart_container = widgets.Output()</span>
+
+<span class="c1"># def on_leeftijd_change(change):</span>
+<span class="c1">#     with chart_container:</span>
+<span class="c1">#         # Clear the previous chart</span>
+<span class="c1">#         chart_container.clear_output(wait=True)</span>
+        
+<span class="c1">#         # Create and display the new chart</span>
+<span class="c1">#         fig = show_filtered_plot(change.new)</span>
+<span class="c1">#         fig.show()</span>
+
+<span class="c1"># # Initially display the chart</span>
+<span class="c1"># initial_fig = show_filtered_plot(leeftijd.value)</span>
+<span class="c1"># with chart_container:</span>
+<span class="c1">#     initial_fig.show()</span>
+
+<span class="c1"># leeftijd.observe(on_leeftijd_change, &#39;value&#39;)</span>
+
+<span class="c1"># # Display the chart and </span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Inleiding</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-en-preprocessing">Dataset en preprocessing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-1-gezondheidsindicatoren-en-diabetes">Perspectief 1: Gezondheidsindicatoren en Diabetes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-1-leeftijdsgebonden-comorbiditeiten-bij-diabetes-de-last-van-hypertensie-en-hartziekte-in-verschillende-leeftijdsgroepen-onderzoeken">Arg 1: Leeftijdsgebonden comorbiditeiten bij diabetes: De last van hypertensie en hartziekte in verschillende leeftijdsgroepen onderzoeken</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-2-geslachtsgebonden-verschillen-in-diabetespreventie-wijzen-op-de-invloed-van-demografische-factoren-op-de-diagnose-van-diabetes">Arg 2: Geslachtsgebonden verschillen in diabetespreventie wijzen op de invloed van demografische factoren op de diagnose van diabetes.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspectief-2-levensstijlfactoren-en-diabetes">Perspectief 2: Levensstijlfactoren en Diabetes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Perspectief 2: Levensstijlfactoren en Diabetes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-1-de-rol-van-bmi-als-risicofactor-voor-diabetes-een-grafische-analyse">Arg 1: De rol van BMI als risicofactor voor diabetes: een grafische analyse</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arg-2-roken-speelt-geen-grote-rol-op-diabetes">Arg 2: Roken speelt geen grote rol op diabetes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arg3-verband-tussen-bloedglucose-level-hemoglobine-a1c-level-en-diabetesrisico">Arg3: Verband tussen bloedglucose level , hemoglobine A1c level en diabetesrisico.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie">Reflectie</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
